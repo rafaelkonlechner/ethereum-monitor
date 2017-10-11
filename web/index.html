@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ethereum Client</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/bower_components/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/bower_components/material-design-lite/material.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Ethereum Block Inspector</h1>
+    </header>
+    <div id="app">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--5-col">
+                <h2>Block</h2>
+                <p>Block number: <input type="number" v-model="blockNumber" min="0" /></p>
+                <pre v-if="block !== {}"><code>{{block}}</code></pre>
+            </div>
+            <div class="mdl-cell mdl-cell--5-col">
+                <h2>Transaction</h2>
+                <p>Transaction Hash: <input type="text" v-model="transactionHash" /></p>
+                <pre v-if="transactionHash !== ''"><code>{{transaction}}</code></pre>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col">
+                <h2>Balance</h2>
+                <p>Address: <input type="text" v-model="address" /></p>
+                <p>ETH: {{balance}}</p>
+                <p>CRO: {{croBalance}}</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="bower_components/vue/dist/vue.min.js "></script>
+    <script src="bower_components/web3/dist/web3.min.js "></script>
+    <script src="index.js "></script>
+</body>
+
+</html>

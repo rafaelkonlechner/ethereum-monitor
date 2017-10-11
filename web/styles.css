@@ -1,0 +1,16 @@
+header {
+    text-align: center;
+    padding: 3vh 0;
+}
+
+pre {
+    overflow-x: scroll;
+}
+
+.mdl-grid {
+    width: 90vw;
+}
+
+.mdl-cell {
+    padding: 1vw;
+}
